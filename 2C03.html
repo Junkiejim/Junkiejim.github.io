@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Math 2C03</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-green"
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+<script type="LaTeXMathML.js"></script>
+
+.search .search-container{
+	float: right;}
+.search input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: 1px solid #ccc;
+</style>
+<body class="w3-light-grey">
+</head>
+<!-- Page Container -->
+<header class="w3-container w3-green w3-center w3-margin-bottom">
+<div class="w3-container w3-padding-16 w3-green">
+<h2 style="text-align:left;"> Math 2C03: Introduction to Differential Equations<span style="float:right;">Summer 2018</span></h2>
+</div>
+<script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+</header>
+<div class="w3-content" style="max-width:1400px;">
+
+  <!-- The Grid -->
+  <div class="w3-row-padding">
+  
+    <!-- Left Column -->
+    <div class="w3-third">
+    
+      <div class="w3-white w3-text-grey w3-card-4">
+        <div class="w3-container">
+          <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-green"></i>Course Info</b></p>
+		  <p style="text-align:left">Instructor: <span style="float:right;"><a href="index.html">Tyler Meadows</a></span> </p>
+		  <p>Email:<span style="float:right;"> meadowta@math.mcmaster.ca</span></p>
+		  <p>Office: <span style="float:right;"> Hamilton Hall 403</span></p>
+		  <p style="text-align:left"> Office Hours: <span style="float:right;">Monday 1700h-1900h</span> <br> <span style="float:right;">Wednesday 1700h-1900h</span> </br></p>
+		  <p> Classroom:<span style="float:right;">Hamilton Hall 104</p>
+          <p style="text-align:left">Class times: <span style="float:right;"> Monday 1900h-2200h </span>
+		  <br> <span style="float:right;"> Wednesday 1900h-2200h </span></br></p>
+
+		  <hr>
+          <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-green"></i>Course Materials</b></p>
+		  <p> Course Outline: <span style="float:right;"><a href="Course_Outline_2C03.pdf" download> <i class="fa fa-file-pdf-o fa-lg w3-margin-left w3-text-green"></i></a></span></p>
+          <p>Textbook: <span style="float:right;"> <a href="https://digitalcommons.trinity.edu/cgi/viewcontent.cgi?article=1008&context=mono" download><i class="fa fa-file-pdf-o fa-lg w3-margin-left w3-text-green"></i></a></span></p>
+          <p>Assignment #1 <span style="float:right;"><a href="Math2C03Assignment1.pdf"><i class="fa fa-file-pdf-o fa-lg w3-margin-left w3-text-green"></i></a></span><br>Due: <span style="float:right;"> Wednesday June 28th </span><br>
+		  Solutions<span style="float:right;"><a href="Assignment1Solutions.pdf"><i class="fa fa-file-pdf-o fa-lg w3-margin-left w3-text-green"></i></a></span></br> </p>
+          
+		  <p>Assignment #2<span style="float:right;"><a href="Math2C03Assignment2.pdf"> <i class="fa fa-file-pdf-o fa-lg w3-margin-left w3-text-green"></i></a></span><br> Due <span style="float:right;"> Monday July 16th</span><br>
+		  Solutions <span style="float:right;"><a href="Assignment2Solutions.pdf"><i class="fa fa-file-pdf-o fa-lg w3-margin-left w3-text-green"></i></a></span></br></p>
+          
+          <p>Assignment #3<span style="float:right;"><a href="Math2C03Assignment3.pdf"> <i class="fa fa-file-pdf-o fa-lg w3-margin-left w3-text-green"></i></a></span><br> Due <span style="float:right;"> Wednesday July 25th</span><br>
+		   Solutions <span style="float:right;"><a href="Assignment3Solutions.pdf"><i class="fa fa-file-pdf-o fa-lg w3-margin-left w3-text-green"></i></a></span></p>
+          
+	      <p>Assignment #4<span style="float:right;"><a href="Math2C03Assignment4.pdf"> <i class="fa fa-file-pdf-o fa-lg w3-margin-left w3-text-green"></i></a></span><br> Due <span style="float:right;"> Wednesday August 1st</span><br>
+		   Solutions <span style="float:right;"><a href="Assignment4Solutions.pdf"><i class="fa fa-file-pdf-o fa-lg w3-margin-left w3-text-green"></i></a></span></p>
+	      <hr>
+          <p class="w3-large w3-text-theme"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-green"></i>Where are we?</b></p>
+          <p style="text-align:left;">Course Progress </p>
+          <div class="w3-light-grey w3-round-xlarge w3-center">
+            <div class="w3-round-xlarge w3-green" style="height:24px;width:100%"> 100%</div>
+          </div>
+          <p style = "text-align:left;">Test one material</p>
+          <div class="w3-light-grey w3-round-xlarge w3-center">
+           <div class="w3-round-xlarge w3-green" style="height:24px;width:100%">100%</div>
+          </div>
+		  <h5 class="w3-opacity">Solutions: <span style="float:right;"><a href="Midterm1Solutions.pdf"> <i class="fa fa-file-pdf-o fa-lg w3-margin-left w3-text-green"></i></a> </span></h5>
+		  <p style = "text-align:left;">Test two material</p>
+		  <div class="w3-light-grey w3-round-xlarge w3-center">
+		    <div class="w3-round-xlarge w3-green" style="height:24px;width:100%">100%</div>
+		  </div>
+		  <h5 class="w3-opacity">Solutions: <span style="float:right;"><a href="Midterm2Solutions.pdf"> <i class="fa fa-file-pdf-o fa-lg w3-margin-left w3-text-green"></i></a> </span></h5>
+		  <br>
+		  <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-green"></i>Marks</b></p>
+		  <form style="w3-padding-16" type="text" name="StudNum" action="marks.php" method="post">
+		<div class="w3-row w3-section">
+		<div class="w3-col" style="width:50px"> <button class="w3-button" type="submit"><i class="w3-large fa fa-search"></i></button></div>
+		<div class="w3-rest">
+         <input class="w3-input" type="text" placeholder="Last 5 digits Student Number" name="student_number" >
+		  </div>
+		 </div>
+		</form>
+         </div>
+      </div><br>
+
+    <!-- End Left Column -->
+    </div>
+
+    <!-- Right Column -->
+    <div class="w3-twothird">
+     
+
+<script>
+function myFunction(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+    
+      
+      <div class="w3-container w3-card w3-white w3-margin-bottom "> 
+ <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-green"></i> Announcements</h2>
+        <div class="w3-container">
+	<!-- Current Announcements -->
+		<h5 class="w3-opacity"> Assignment 4, Question 1 e <span style="float:right;"> July 31 2018</span></h5>
+		<p> I have found a flaw with Question 1 e from assignment 4. You can skip it if you are having trouble with it. I will not mark it.</p>
+		<h5 class="w3-opacity"> Final Exam Practice <span style="float:right;"> July 30th 2018</span></h5>
+		<p> There are some practice questions similar to what you may encounter on the final exam available at the end of the PDF from the 2nd half of Lecture 12. It is also available here <a href="FinalExamReview.pdf"><i class="fa fa-file-pdf-o fa-lg w3-margin-left w3-text-green"></i></a></p>
+		<h5 class="w3-opacity"> Formula Sheet</h5>
+		<p> Here is the formula sheet you will recieve on your final exam <a href="FormulaSheet.pdf"> <i class="fa fa-file-pdf-o fa-lg w3-margin-left w3-text-green"></i></a></p>
+		<h5 class="w3-opacity"> Practice from Lecture 12</h5>
+		<p> Textbook: Section 10.5<span style="float:right;"> Questions 1-7, 13-17</span><br>
+		Textbook: Section 10.6 <span style="float:right;"> Questions 1-4, 9-12, 17-20</span></p>
+		<hr>
+	</div>
+
+
+        <!-- Old Announcements -->
+	<button onclick="myFunction('Old')" class="w3-button w3-block w3-left-align"><h4 class="w3-opacity"> Previous Announcements:</h4></button>
+	<div id="Old" class="w3-container w3-hide">
+		<h5 class="w3-opacity"> Practice from Lecture 11 <span style="float:right;"> July 26th 2018</span></h5>
+		<p> Textbook: Section 8.4 <span style="float:right;"> Questions 1-14, 19-28</span><br>
+		Textbook: Section 8.5 <span style="float:right;"> Questions 1-20</span><br>
+		Textbook: Section 10.4 <span style="float:right;"> Questions 1-7, 16-19</span><br>
+		Course Package: Assignment 23<span style="float:right;"> Questions 1-5 <a href="2c3assg23solutions"> (Solutions)</a></span></p>
+		<h5 class="w3-opacity"> Course Evaluations</h5>
+		<p> Course Evaluations are now available. Please take a few minutes to fill out the anonymous course evaluations at <a href="https://evals.mcmaster.ca">https://evals.mcmaster.ca</a>. Evaluations close Friday July 27th, so make sure to fill in the evaluations before then!</p>
+		
+		<hr>
+		<h5 class="w3-opacity"> Assignment 4 is online! <span style="float:right;"> July 25th 2018</span></h5>
+		<p> Assignment 4 is available from the sidebar, and is due Wednesday August 1st.</p>		
+		<hr>
+	<h5 class="w3-opacity"> Practice from Lecture 10 <span style="float:right;"> July 24th 2018 </span></h5>
+		<h5 class="w3-opacity"> Frobenius Method</h5>
+		<p> Textbook: Section 7.5 <span style="float:right;"> Questions 14-25, 33-46</span><br>
+		Textbook: Section 7.6 <span style="float:right;"> Questions 12-22, 28-38</span><br>
+		Textbook: Section 7.7 <span style="float:right;"> Questions 1-40</span><br>
+		Course Package: Assignment 29 <span style="float:right;"> Questions 1-5 <a href="2c3assg29solutions">(Solutions)</a></span><br></p>
+		<h5 class="w3-opacity"> Laplace Transforms </h5>
+		<p> Textbook: Section 8.1 <span style="float:right;"> Questions 1,2,7,8,12</span><br>
+		Textbook: Section 8.2 <span style="float:right;"> Questions 1-8</span><br>
+		Textbook: Section 8.3 <span style="float:right;"> Questions 1-37<span><br></p>
+		
+		<h5 class="w3-opacity"> Midterm 2 Marks are online <span style="float:right;"> July 19th 2018</span></h5>
+		<p> I decided to make question 5 from the midterm a bonus question, so the total midterm marks are now 26 instead of 32. For most of the class your marks are available on the sidebar. If you wrote with SAS, then I haven't marked your exam yet, but it will be done by the end of the day. </p>
+	<h5 class="w3-opacity"> Assignment 3 is Online <span style="float:right;"> July 18th 2018</span></h5>
+		<p> Assignment 3 is available on the sidebar. It is relatively short (only 4 questions) and will be due Wednesday July 25th at the beginning of class. We will have covered all the material for required for the assignment by the end of Lecture on Wednesday July 18th.</p>
+		<h5 class="w3-opacity"> Midterm 2 is tonight! </h5>
+		<p> The midterm will cover everything up to and including material covered on Monday, although will focus more heavily on things we did before Monday. Please write your midterm in the same room you wrote it in last time. </p>
+		<hr>
+		<h5 class="w3-opacity"> Practice from Lecture 8 <span style="float:right;"> July 16th 2018</span></h5>
+		<p> Textbook: Section 7.1 <span style="float:right;"> Questions 1-5,11-15</span><br>
+		Textbook: Section 7.2 <span style="float:right;"> Questions 1-8</span><br>
+		Course Package: Assignment 26 <span style="float:right;"> Questions 1-10 <a href="2c3assg26solutions.pdf"> (Solutions)</a></span><br>
+		Course Package: Assignment 27 <span style="float:right;"> Questions 1 and 4<a href="2c3assg27solutions.pdf"> (Solutions)</a></span><br>
+		Course Package: Assignment 28 <span style="float:right;"> Questions 1-7<a href="2c3assg28solutions.pdf"> (Solutions)</a></span><p>
+		<hr> 
+	  <h5 class="w3-opacity">Extra Office Hours Friday <span style="float:right;">July 12th 2018</span></h5>
+		<p>Since assignment 2 is due Monday, I'll be having office hours friday afternoon from 1500h-1700h in HH403</p>
+		<h5 class="w3-opacity">Practice from Lecture 7 </h5>
+		<p>Textbook: Section 5.4 <span style="float:right;">Questions 1-19</span><br>
+		Textbook: Section 5.5 <span style="float:right;">Questions 1-17, 22-26</span><br>
+		Textbook: Section 5.7 <span style="float:right;">Questions 1-32</span><br>
+		Course Package: Assignment 16 <span style="float:right;">Questions 1-3 <a href="2c3assg16solutions.pdf">(Solutions)</a></span><br>
+		Course Package: Assignment 17 <span style="float:right;">Questions 1-8 <a href="2c3assg17solutions.pdf">(Solutions)</a></span><br>
+		Course Package: Assignment 18 <span style="float:right;">Questions 1-4 <a href="2c3assg18solutions.pdf">(Solutions)</a></span></p>
+		<hr>
+	  <h5 class="w3-opacity"> Problems for Lecture 6<span style="float:right;"> July 10th 2018</span></h5>
+	  <p> Textbook: Section 5.1 <span style="float:right;"> Questions 5-23</span><br>
+	  Textbook: Section 5.2 <span style="float:right;"> Questions 1-17</span><br>
+	  Course Package: Assignment 14 <span style="float:right;"> 2-4,5a-5c, 6-8 <a href="2c3assg14solutions.pdf">(Solutions)</a></span><br>
+	  Course Package: Assignment 15 <span style="float:right;"> 1,2,4-9 <a href="2c3assg15solutions.pdf">(Solutions)</a></span></br></p>
+	  <hr>
+	  <h5 class="w3-opacity"> Assignment 1 Marks <span style="float:right;"> July 9th 2018</span></h5>
+	  <p> The marks for assignment 1 are up! You can find how you did by searching using the last 5 digits of your student at the bottom of the column on the left.</p>
+	  <hr>
+	  <h5 class="w3-opacity"> Assignment 2 <span style="float:right;"> July 5th 2018</span></h5>
+	  <p>Assignment 2 is available from the side bar. It is due Monday, July 16th. Please make sure that you have your name and student number on the front page of the assignment and all pages are stapled together. </p>
+	  <h5 class="w3-opacity"> Practice Problems from Lecture 5</h5>
+	  <p> Textbook: Section 5.6 <span style="float:right;"> Questions 1-33</span><br>
+	  Course Package: Assignment 13 <span style="float:right;"> Questions 1-6 <a href="2c3assg13solutions.pdf">(Solutions)</a></span><br>
+	  Course Package: Assignment 16 <span style="float:right;"> Questions 4-6 <a href="2c3assg16solutions.pdf">(Solutions)</a></span><br>
+	  Note from the textbook: fundamental set of solutions means find y<sub>1</sub> and y<sub>2</sub> where y = C<sub>1</sub>y<sub>1</sub> +C<sub>2</sub>y<sub>2</sub> is the general solution.<br>
+	  For the course package: Assignment 13, don't do 4a or 5a, we haven't talked about the existence and uniqueness theorem.</br>
+	  <h5 class="w3-opacity"> Practice Problem Solutions <span style="float:right;"> July 3rd 2018</span></h5>
+	  <p> I have uploaded my solutions to <a href="Practice5Solution.pdf">Assignment 5</a>, <a href="Practice6Solution.pdf">Assignment 6</a>, and <a href="Practice11SolutionEuler.pdf">Assignment 11</a> using the Euler method to the website. You can follow the links in the previous sentence, or you can find the solutions in older announcements. I have also uploaded the solutions to the first assignment, you can find them in the left column. 
+	  </p>
+	  <hr>
+	  <h5 class="w3-opacity"> Some Updates: <span style="float:right;"> July 2nd 2018</span></h5>
+	  <p> My website updates were a little off last week. I should have fixed all issues that people have been having accessing files by now. I'm sorry if I was a little slow to respond, I was away this weekend without internet access. <br> One of your classmates has been typing up their notes, and has offered to share them with the class. Typed notes for lectures 1-3 are available in the older notes section. Just click on the black PDF icon <i class="fa fa-file-pdf-o fa-lg"></i> next to each date.
+	  <hr>
+	  <h5 class="w3-opacity"> No class on Monday / Extra Office Hours <span style="float:right;">June 28th 2018</span></h5>
+	  <p> Since there is no class on Monday July 2nd because of Canada Day, I'll be having extra office hours Tuesday July 3rd from 1700h-1900h, and before the midterm on Wednesday from 1700h-1900h</p>
+	  <h5 class="w3-opacity"> Practice Problems from Lecture 4 </h5>
+	  <p> Textbook: Section 3.3 <span style="float:right;"> Questions 1-5</span><br>
+	  Textbook: Section 2.4 <span style="float:right;"> Questions 1-13</span><br>
+	  Textbook: Section 2.5 <span style="float:right;"> Questions 1-22</span><br>
+	  Textbook: Section 2.6 <span style="float:right;"> Questions 3-16</span><br>
+	  Course Package: Assignment 10 <span style="float:right;"> Questions 1-4 <a href="2c3assg10solutions.pdf">(Solutions)</a></span><br>
+	  Course Package: Assignment 11 <span style="float:right;"> Questions 1-5 </span><br>
+	  For Assignment 11, repeat each question using the 4th order Runge-Kutta Method (RK4).
+	  <h5 class="w3-opacity"> Solutions to other practice problems</h5>
+	  <p>Look in the Old announcements for solutions to earlier practice problems. I am working on solutions to Assignments 5,6,10,11, and 11 using RK4. I will have them posted before the midterm.</p>
+	  <h5 class="w3-opacity"> Midterm July 4th</h5>
+	  The midterm will be 90 minutes long, and consist of 5 long answer questions. The material will include everything covered up to and including the lecture on Wednesday June 28th.<br> We will be split into 2 classrooms, HH104 and HH107 (across the hall from our classroom). If your surname begins with A-M you are in HH104, and if your surname begins with N-Z you are in HH107.</br></p>
+		<hr>
+	  <h5 class="w3-opacity"> Practice problems from Lecture 3 <span style="float:right;"> June 26th 2018</span></h5>
+	  <p style="text-align-left"> Textbook: Section 1.3 <span style="float:right;"> Questions 1-11</span><br>
+	  Textbook: Section 3.1 <span style="float:right;"> Questions 1-5</span><br>
+	  Course Package <span style="float:right;"> Assignment 5 <a href="Practice5Solution.pdf">(solutions)</a></span><br>
+	  <span style="float:right;"> Assignment 6 <a href="Practice6Solution.pdf">(solutions)</a></span><br>
+	  <span style="float:right;"> Assignment 11<a href="Practice11SolutionEuler.pdf">(solutions)</a></span><br>
+	  For the questions from Section 3.1, do at most 3 steps. If you are familiar with matlab, python, or some other programming language, try getting your computer to do the computations for you.</br></p>
+	  <h5 class="w3-opacity"> Assignment 1 Due Tomorrow!</h5>
+	  <p> Assignment 1 is due tomorrow at the beginning of class. If you want to hand your assignment in earlier, you can drop it in the dropbox located outside of our classroom in Hamilton Hall.</p>
+	  <hr>
+	  <h5 class="w3-opacity"> Assignment 1 Update: <span style="float:right;"> June 25th 2018</span></h5>
+	  <p style="text-align:left;"> I made a mistake when typing out question 5, and got the k and m mixed up. I have updated Assignment 1 with this correction. Sorry about that!</p>
+	  <hr>
+	  <h5 class="w3-opacity"> Practice from Lecture 2: <span style="float:right;"> June 21st 2018</span></h5>
+	  <p style="text-align:left;">Lecture 2 covered first order linear ODEs and first order seperable ODEs. If you want to practice solving these try:</br> <br>Textbook, Section 2.1: <span style="float:right;"> Problems 1-11, 16-24, 30-37 </span><br>
+	  Textbook, Section 2.2: <span style="float:right;"> Problems 1-6,11,12,24,25,27</span><br>
+	  Course Package, Assignment 9: <span style="float:right;"> Problems 1-5 <a href="Practice9Solution.pdf">(solutions)</a> </span><br>
+	  Course Package, Assignment 7: <span style="float:right;"> Problems 1-8 <a href="Practice7Solution.pdf">(solutions)</a> </span><br>
+	  Remember to try to classify each new ODE. It'll be important once we start encountering more types and we have less hints on what types we have. </br></p>
+	  <hr>
+	  <h5 class="w3-opacity"> Assignment 1 <span style="float:right;"> June 20th 2018</span></h5>
+	  <p style="text-align:left;">Assignment 1 is available for download under course materials in the left column. Your solutions are due at the beginning of class on Wednesday June 28th. Please include your name and student number on all pages of your solutions.</p>
+	  <hr>
+	  <h5 class="w3-opacity">Review of Integration: <span style="float:right;">June 19th 2018 </span></h5>
+	  <p style="text-align:left;"> Some students asked for some review material. These youtube videos cover some important techniques we will need through the rest of the course: <br> <a href="https://www.youtube.com/watch?v=b76wePnIBdU&list=PLaxZE2h7Oq4rL3dnehZ9UaK0NsoN_5hwT&index=19">Integration by substitution</a><br> <a href="https://www.youtube.com/watch?v=ouYZiIh8Ctc">Integration by parts</a><br><a href="https://www.youtube.com/watch?v=7IkufOBIw5g"> Partial fraction decomposition</a><br> <a href="https://www.youtube.com/watch?v=n4EK92CSuBE">Trigonometric substitutions</a><br></p>
+	<h5 class="w3-opacity"> Practice problems</h5>
+	<p style="text-align:left;">Textbook:<span style="float:right;"> Section 1.2 Problems 1-6</span><br>
+	  Course Package:<span style="float:right;"> Assignment 1 <a href="Practice1Solution.pdf">(Solutions)</a></span><br>
+	<span style="float:right;"> Assignment 3 <a href="Practice3Solution.pdf">(Solutions)</a></span><br>
+	<span style="float:right;"> Assignment 4 <a href="Practice4Solution.pdf">(Solutions)</a></span></br></p>
+	<hr>
+          <h5 class="w3-opacity">We're Online! <span style="float:right;">June 4th 2018</span></h5>
+          <p style="text-align:left;">The website is now up and running: Please check back periodically for updates.</p>
+	      <hr>
+	    </div>
+      </div>
+
+	  <div class="w3-container w3-card w3-white w3-margin-bottom">
+		<h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-green"></i> Lecture Notes</h2>
+		<div class="w3-container"> 
+		<!-- Current Lecture Notes -->
+		<h5 class="w3-opacity"> Monday July 30 </h5>
+		<p style="text-align:left;"> Part #1: More Linear Systems <span style ="float:right;"><a href="Lecture12Part1.pdf"><i class="fa fa-file-pdf-o fa-lg w3-margin-left w3-text-green"></i></a></span><br>
+		Sections 8.5 and  8.6 in the textbook<br>
+		Part #2: Exam Review<span style="float:right;"><a href="FinalExamReview.pdf"><i class="fa fa-file-pdf-o fa-lg w3-margin-left w3-text-green"></i></a></span><br>
+		All previous chapters of the textbook </p>
+		<hr>
+		</div>
+	
+		<button onclick="myFunction('Notes')" class="w3-button w3-block w3-left-align"><h4 class="w3-opacity"> Older Class Notes:</h4></button>
+		<div id="Notes" class="w3-container w3-hide">
+		<!-- Old Lecture Notes -->
+		<h5 class="w3-opacity"> Wednesday July 25 </h5>
+		<p style="text-align:left;"> Part #1: Harder Laplace Transforms <span style ="float:right;"><a href="Lecture11Part1.pdf"><i class="fa fa-file-pdf-o fa-lg w3-margin-left w3-text-green"></i></a></span><br>
+		Sections 8.4 and  8.5 in the textbook<br>
+		Part #2: Linear Systems of Equations <span style="float:right;"><a href="Lecture11Part2.pdf"><i class="fa fa-file-pdf-o fa-lg w3-margin-left w3-text-green"></i></a></span><br>
+		Sections 10.4 in the textbook </p>
+		<hr>
+		<h5 class="w3-opacity"> Monday July 23 </h5>
+		<p style="text-align:left;"> Part #1: The Frobenius Method <span style ="float:right;"><a href="Lecture10Part1.pdf"><i class="fa fa-file-pdf-o fa-lg w3-margin-left w3-text-green"></i></a></span><br>
+		Sections 7.5, 7.6, and 7.7 in the textbook<br>
+		Part #2: Introduction to Laplace Transforms <span style="float:right;"><a href="Lecture10Part2.pdf"><i class="fa fa-file-pdf-o fa-lg w3-margin-left w3-text-green"></i></a></span><br>
+		Sections 8.1, 8.2 and 8.3 in the textbook </p>
+		 <h5 class="w3-opacity"> Wednesday July 18th</h5>
+		 <p style="text-align:left;"> Part #1: Regular Singular Points <span style ="float:right;"><a href="Lecture9Part1.pdf"><i class="fa fa-file-pdf-o fa-lg w3-margin-left w3-text-green"></i></a></span><br> Section 7.4 in the textbook</p>
+		 <hr>
+		 <h5 class="w3-opacity"> Monday July 16th</h5>
+		 <p style="text-align:left;"> Part #1: Review of Series and Power Series<span style="float:right;"><a href="Lecture8Part1.pdf"><i class="fa fa-file-pdf-o fa-lg w3-margin-left w3-text-green"></i></a></span><br> Sections 7.1 in the textbook<br>
+		 Part #2: Series solutions around a regular point<span style="float:right;"><a href="Lecture8Part2.pdf"><i class="fa fa-file-pdf-o fa-lg w3-margin-left w3-text-green"></i></a></span><br>
+		 Section 7.2 in the textbook</p> 
+		 <hr>
+ 		<h5 class="w3-opacity"> Wednesday July 11th</h5>
+		 <p style="text-align:left;"> Part #1: Undetermined Coefficients<span style="float:right;"><a href="Lecture7Part1.pdf"><i class="fa fa-file-pdf-o fa-lg w3-margin-left w3-text-green"></i></a></span><br> Sections 5.4 and 5.5 in the textbook<br>
+		 Part #2: Variation of Parameters and Cauchy Euler Equations<span style="float:right;"><a href="Lecture7Part2.pdf"><i class="fa fa-file-pdf-o fa-lg w3-margin-left w3-text-green"></i></a></span><br>
+		 Sections 5.7 and  in the textbook</p> 
+		 <hr>
+		 <h5 class="w3-opacity"> Monday July 9th</h5>
+		 <p style="text-align:left;"> Part #1: Linearly independent functions and the Wronskian<span style="float:right;"><a href="Lecture6Part1.pdf"><i class="fa fa-file-pdf-o fa-lg w3-margin-left w3-text-green"></i></a></span><br> Section 5.1 in the textbook<br>
+		 Part #2: Constant coefficient equations <span style="float:right;"><a href="Lecture6Part2.pdf"><i class="fa fa-file-pdf-o fa-lg w3-margin-left w3-text-green"></i></a></span><br>
+		 Section 5.2 in the textbook</p> 
+		 <hr>
+		 <h5 class="w3-opacity"> Wednesday July 4th<span style="float:right;"><a  href="2C03-5.pdf"><i class="fa fa-file-pdf-o fa-lg w3-margin-left"></i></a>  </span></h5>
+		 <p style="text-align:left;"> Part #1: Linear differential operators and reduction of order<span style="float:right;"><a href="Lecture5Part1.pdf"><i class="fa fa-file-pdf-o fa-lg w3-margin-left w3-text-green"></i></a></span><br> Sections 5.6 in the textbook</p> 
+		 <hr>
+		<h5 class="w3-opacity"> Wednesday June 27th<span style="float:right;"><a  href="2C03-4.pdf"><i class="fa fa-file-pdf-o fa-lg w3-margin-left"></i></a>  </span></h5>
+		 <p style="text-align:left;"> Part #1: Numerical Methods Continued<span style="float:right;"><a href="Lecture4Part1.pdf"><i class="fa fa-file-pdf-o fa-lg w3-margin-left w3-text-green"></i></a></span><br> Sections 3.1 and 3.3 in the textbook</p> 
+		 <p style="text-align:left;"> Part #2: Some First order non-linear ODEs <span style="float:right;"><a href="Lecture4Part2.pdf"><i class="fa fa-file-pdf-o fa-lg w3-margin-left w3-text-green"></i></a></span><br> Sections 2.4, 2.5, and 2.6 in the textbook</p>
+		 <hr>
+		 <h5 class="w3-opacity"> Monday June 25th<span style="float:right;"><a  href="2C03-3.pdf"><i class="fa fa-file-pdf-o fa-lg w3-margin-left"></i></a>  </span></h5>
+		 <p style="text-align:left;"> Part #1: First order autonomous ODEs, Direction fields<span style="float:right;"><a href="Lecture3Part1.pdf"><i class="fa fa-file-pdf-o fa-lg w3-margin-left w3-text-green"></i></a></span><br> Section 1.3 in the textbook for Direction Fields, Section 2.2 (sort of) for autonomous ODEs</p> 
+		 <p style="text-align:left;"> Part #2: Numerical Methods <span style="float:right;"><a href="Lecture3Part2.pdf"><i class="fa fa-file-pdf-o fa-lg w3-margin-left w3-text-green"></i></a></span><br> Sections 3.1 in the textbook</p>
+		 <h5 class="w3-opacity"> Wednesday June 20th <span style="float:right;"><a  href="2C03-2.pdf"><i class="fa fa-file-pdf-o fa-lg w3-margin-left"></i></a>  </span></h5> 
+		 <p style="text-align:left;"> Part #1: First order linear differential equations <span style="float:right;"><a href="Lecture2Part1.pdf"><i class="fa fa-file-pdf-o fa-lg w3-margin-left w3-text-green"></i></a></span><br>Section 2.1 in the textbook for variation of parameters, Section 2.5 for Integrating factors</br></p>
+		 <p style="text-align:left;"> Part #2: First order seperable differential equations <span style="float:right;"><a href="Lecture2Part2.pdf"><i class="fa fa-file-pdf-o fa-lg w3-margin-left w3-text-green"></i></a></span><br> Section 2.2 in the textbook </br></p>
+		 <h5 class="w3-opacity"> Monday June 18th <span style="float:right;"><a  href="2C03-1.pdf"><i class="fa fa-file-pdf-o fa-lg w3-margin-left"></i></a>  </span></h5>
+		 <p style="text-align:left;">Part #1: What are differential equations? <span style="float:right;"><a href="Lecture1Part1.pdf"><i class="fa fa-file-pdf-o fa-lg w3-margin-left w3-text-green"></i></a></span><br>Section 1.1 in the textbook</p>
+		 <p style="text-align:left;">Part #2: Definitions and basic classification <span style="float:right;"><a href="Lecture1Part2.pdf"><i class="fa fa-file-pdf-o fa-lg w3-margin-left w3-text-green"></i></a></span><br> Section 1.2 in the textbook</p>
+		 <hr>
+		 </div>
+	  </div>
+    <!-- End Right Column -->
+    </div>
+    
+  <!-- End Grid -->
+  </div>
+  
+  <!-- End Page Container -->
+</div>
+
+<footer class="w3-container w3-green w3-center w3-margin-top">
+<div class="w3-third"><p style="text-align:left;">
+	<a href="http://www.mcmaster.ca"> McMaster University</a><br><a href="http://ms.mcmaster.ca"> Mathematics and Statistics</a></p>
+    </div>
+<div class="w3-third"><br><br>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</div>
+<div class="w3-third"><p style="text-align:right;">
+ Hamilton Hall 1280 Main Street West <br> Hamilton, Ontario L8P 3X7
+	</p>
+ </div>
+</footer>
+
+</body>
+</html>
