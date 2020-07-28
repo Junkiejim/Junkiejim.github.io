@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<title>COVID-19 Modeling Efforts</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-green"
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<body class="w3-light-grey">
+
+<!-- Header -->
+<div class="w3-container w3-padding-16 w3-green">
+	<div class="w3-third">
+  <h2 style="text-align:left;"> COVID-19 Modeling</h2>
+	</div>
+	<div class="w3-third">
+	<h2 style="text-align:center;"> </h2>
+	</div>
+	<div class="w3-third">
+	<h2 style="float:right;"> <a href="../index.html"><i class="fa fa-home w3-margin-right w3-xxlarge"></i></a></h2>
+	</div>
+</div>
+<!-- Page Container -->
+<div class="w3-content" style="max-width:1400px;">
+	<div class="w3-container w3-white w3-margin-top">
+		<h5 class="w3-opacity"> <b> Moscow, Idaho Compartmental Model</b> </h5>
+		<h5 class="w3-opacity"> With Jennifer Johnson-Leung </b></h5>
+		<p>
+		 The model is a modified SEIR model split into four subpopulations;
+		 Students, faculty, staff, and townsfolk. We're basing the model off of one
+		 created for Emory University in Atlanta, Georgia. Because the population
+		 of Atlanta is much larger than the university population, the model treated
+		 the city as a constant source of infections. In contrast, approximately
+		 half of the population of Moscow consists of University students, faculty,
+	 	 and staff, so it makes sense to consider how the epidemic within the two
+		 populations drive each other. </p>
+		 <p>
+				\begin{align}
+				    \dot{S}_i &= -\beta\sum_{j=1}^{6}M_{ij}I_j S_i,\\
+				    \dot{E}_i &= \beta\sum_{j=1}^{6}M_{ij}I_j S_i -\gamma_i E_i,\\
+				    \dot{I}_i &= \gamma_i E_i - \tau_i I_i,\\
+				    \dot{Q}_i &= \tau_i c_Q I_i - \sigma_i Q_i,\\
+				    \dot{H}_i &= \sigma_i p_H Q_i +\tau_i c_H I_i - rH_i,\\
+				    \dot{R}_i &= \tau_i(1-c_Q-c_H)I_i+\sigma_i(1-p_H)Q_i+r(1-m_H)H_i,\\
+				    \dot{D}_i &= r m_H H_i,
+				\end{align}
+		 </p>
+	<p> where \(S_i,E_i,I_i,Q_i,H_i,R_i,D_i\) are the number of susceptible individuals,
+	exposed individuals, infected individuals, quarantined individuals, hospitalized
+	individuals, recovered individuals, and deceased individuals respectively in population \(i\)</p>
+	<p> Data is taken from <a href="https://www.uidaho.edu/about/fast-facts"> here</a>,
+		 <a href="https://www.census.gov/quickfacts/fact/table/moscowcityidaho/LND110210">here</a>,
+		 and the document in the dropbox entitled "Faculty and Staff Age Distribution for COVID-19 Modeling.xlsx".
+		 Census data includes students, faculty, and staff, so the town population is computed by subtracting
+		 the school populations from the 2019 Census population.</p>
+	<table style="align:center">
+	<tr> <th>Students </th> <th> Faculty </th> <th> Staff </th> <th> Town Population </th></tr>
+	<tr> <td>  9328 </td> <td>  935 </td> <td> 1657 </td> <td> 13782 </td></tr>
+	</table>
+	<p>We are guessing at initial conditions, but we'll assume that, when classes
+		start on August 24th, there are about 50 exposed students. </p>
+		<table style="padding:">
+			<tr> <th> Parameter </th> <th> Symbol </th><th> Estimate </th><th> Source </th></tr>
+			<tr> <td>Transmission Rate </td> <td> \(\beta\) </td> <td> 0.03 </td><td> From Ben's Fits </td></tr>
+			<tr> <td>Contact rates </td><td> \(M_c\) </td><td> See below </td><td> UI class sizes, <a href = "https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.0050074"> [3] </a> </td></tr>
+			<tr> <td>Incubation Period </td><td> \(1/\gamma\) </td><td> 5.2 days </td><td> <a href="https://www.thelancet.com/journals/laninf/article/PIIS1473-3099(20)30230-9/fulltext"> [1] </a> </td></tr>
+			<tr> <td>Infectious Period </td><td> \(1/\tau\) </td><td> 4 days </td><td> <a href="https://www.nature.com/articles/s41591-020-0869-5/"> [2] </a> </td></tr>
+			<tr> <td>Percentage Quarantined </td><td> \(c_Q\) </td><td> (0.17,0.17,0.17,0.17) </td><td> Assumption\(^*\) </td> </tr>
+			<tr> <td>Percentage Hospitalized </td><td> \(c_H\) </td><td> (0.0179,0.0354,0.0278,0.0278) </td><td> Full Idaho Model </td></tr>
+			<tr> <td>Length of Quarantine </td><td> \(1/\sigma\) </td><td> 14 days </td><td> CDC recommendations </td></tr>
+			<tr> <td>Percentage of Quarantined Hospitalized </td><td> \(p_H\) </td><td> (0.0179,0.0354,0.0278,0.0278) </td><td> Full Idaho Model </td></tr>
+			<tr> <td>Length of hospitalization </td><td> \(1/r\) </td><td> (5.67,4.53,4.36,7.75) days </td><td> from hospitalization data </td></tr>
+			<tr> <td>Mortality rate </td><td> \(m_H\) </td><td> (0.000756, 0.02, 0.00314, 0.00314) </td><td> from hospitalization data </td></tr>
+			<tr> <td>\(\dagger\) Mean Age </td><td> NA </td><td> (21,50.5,44.7,32.9)</td></tr>
+		</table>
+	</div>
+</div> <!-- End Page Container -->
+
+<footer class="w3-container w3-green w3-center w3-margin-top">
+<div class="w3-third"><p style="text-align:left;">
+	<a href="http://uidaho.edu"> University of Idaho</a><br><a href="https://www.uidaho.edu/sci/math"> Mathematics and Statistical Sciences</a></p>
+    </div>
+<div class="w3-third"><br><br>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</div>
+<div class="w3-third"><p style="text-align:right;">
+ 875 Perimeter Drive <br> Moscow, Idaho 83844
+	</p>
+ </div>
+</footer>
+</body>
+</html>
